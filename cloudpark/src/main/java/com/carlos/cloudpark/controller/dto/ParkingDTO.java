@@ -1,8 +1,8 @@
-package com.carlos.cloudpark.model;
+package com.carlos.cloudpark.controller.dto;
 
 import java.time.LocalDateTime;
 
-public class Parking {
+public class ParkingDTO {
 
     private String id;
     private String license;
@@ -12,17 +12,6 @@ public class Parking {
     private LocalDateTime entryDate;
     private  LocalDateTime exitDate;
     private Double bill;
-
-    public Parking(String id, String license, String state, String model, String color) {
-        this.id = id;
-        this.license = license;
-        this.state = state;
-        this.model = model;
-        this.color = color;
-    }
-
-    public Parking() {
-    }
 
     public String getId() {
         return id;
@@ -46,6 +35,14 @@ public class Parking {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public String getColor() {
@@ -78,13 +75,5 @@ public class Parking {
 
     public void setBill(Double bill) {
         this.bill = bill;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 }
